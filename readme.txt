@@ -4,7 +4,7 @@ Tags:              forms, webhook, ai, n8n, gutenberg
 Requires at least: 6.5
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.0.1
+Stable tag:        1.0.2
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,10 @@ Das Plugin legt die Webhook-Antwort in einer eigenen Tabelle ab und liefert sie 
 
 == Changelog ==
 
+= 1.0.2 =
+* Plugin-Symbol und -Banner werden jetzt an WordPress gemeldet und erscheinen in der Plugin-Liste und im „Details ansehen"-Dialog. Vorläufige Grafiken, bis endgültiges Material vorliegt.
+* Der geteilte Update-Code trägt eine neue Versionsnummer. Ohne sie hätte die älteste installierte Kopie das Verhalten aller Plugins der Familie bestimmt.
+
 = 1.0.1 =
 * Beim Löschen des Plugins wird die Ergebnistabelle entfernt. Formulare und Einsendungen gehören dem Basis-Plugin und bleiben unangetastet.
 
@@ -56,6 +60,9 @@ Das Plugin legt die Webhook-Antwort in einer eigenen Tabelle ab und liefert sie 
 * Lizenz-Header von Proprietary auf GPLv2 or later; kommerziell sind Updates und Support.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Bringt Symbole und Banner mit. Damit sie überall greifen, sollten alle Plugins der Familie aktualisiert werden.
 
 = 1.0.1 =
 Beim **Löschen** des Addons werden gespeicherte Webhook-Ergebnisse mit entfernt.
