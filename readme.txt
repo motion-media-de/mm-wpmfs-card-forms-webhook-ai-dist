@@ -4,7 +4,7 @@ Tags:              forms, webhook, ai, n8n, gutenberg
 Requires at least: 6.5
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,12 +47,18 @@ Das Plugin legt die Webhook-Antwort in einer eigenen Tabelle ab und liefert sie 
 
 == Changelog ==
 
+= 1.0.1 =
+* Beim Löschen des Plugins wird die Ergebnistabelle entfernt. Formulare und Einsendungen gehören dem Basis-Plugin und bleiben unangetastet.
+
 = 1.0.0 =
 * Erste Fassung: Webhook je Einsendung, gespeicherte Ergebnisse, Ergebnisseite.
 * Umbenannt auf das Präfix der WPMFS-Familie (vormals `card-forms-webhook-ai`).
 * Lizenz-Header von Proprietary auf GPLv2 or later; kommerziell sind Updates und Support.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Beim **Löschen** des Addons werden gespeicherte Webhook-Ergebnisse mit entfernt.
 
 = 1.0.0 =
 Erste Fassung unter dem neuen Plugin-Slug `mm-wpmfs-card-forms-webhook-ai`. Die REST-Route heißt jetzt `mm-wpmfs-card-forms/v1`; bestehende n8n-Workflows müssen angepasst werden.
