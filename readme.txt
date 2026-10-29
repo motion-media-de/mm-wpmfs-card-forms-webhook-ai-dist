@@ -4,7 +4,7 @@ Tags:              forms, webhook, ai, n8n, gutenberg
 Requires at least: 6.5
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.0.2
+Stable tag:        1.0.3
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,11 @@ Es setzt das kostenlose **Card Forms** voraus. WordPress blockiert die Aktivieru
 Das Plugin legt die Webhook-Antwort in einer eigenen Tabelle ab und liefert sie über die REST-Route `mm-wpmfs-card-forms/v1/result/<session_id>` aus.
 
 == Changelog ==
+
+= 1.0.3 =
+* Das Plugin startet jetzt auch dann, wenn alle Plugins aktiv sind. Vorher lud
+  es vor dem Basis-Plugin, meldete fälschlich „benötigt das Basis-Plugin“ und
+  blieb wirkungslos.
 
 = 1.0.2 =
 * Plugin-Symbol und -Banner werden jetzt an WordPress gemeldet und erscheinen in der Plugin-Liste und im „Details ansehen"-Dialog. Vorläufige Grafiken, bis endgültiges Material vorliegt.
