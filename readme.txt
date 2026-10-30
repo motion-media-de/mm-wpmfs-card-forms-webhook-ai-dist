@@ -4,7 +4,7 @@ Tags:              forms, webhook, ai, n8n, gutenberg
 Requires at least: 6.5
 Tested up to:      7.0
 Requires PHP:      7.4
-Stable tag:        1.1.0
+Stable tag:        1.1.1
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,9 @@ Diesen Port lässt WordPress für sichere Anfragen nicht zu. n8n hinter einen Re
 Im Code-Node HMAC-SHA256 über `Timestamp + "." + Rohrumpf` mit dem Secret berechnen, als Hex kodieren, `sha256=` voranstellen und mit `X-WPMFS-Signature` vergleichen. Wichtig ist der unveränderte Rohrumpf — im Webhook-Node „Raw Body“ einschalten. Anfragen mit einem Zeitstempel, der mehr als einige Minuten alt ist, sollte der Empfänger verwerfen.
 
 == Changelog ==
+
+= 1.1.1 =
+* Deutsche Übersetzung: Die Seite Card Forms → Webhook und alle Hinweise des Plugins erscheinen auf deutschen Websites jetzt auf Deutsch. Bisher fehlten die Sprachdateien im Paket.
 
 = 1.1.0 =
 * Der Webhook-Versand funktioniert jetzt. Bis 1.0.3 war er nur angelegt: Einsendungen wurden nie gesendet, auch wenn im Formular ein Webhook eingetragen war.
