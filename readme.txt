@@ -2,15 +2,17 @@
 Contributors:      wpmfs
 Tags:              forms, webhook, ai, n8n, gutenberg
 Requires at least: 6.5
-Tested up to:      7.0
+Tested up to:      7.1
 Requires PHP:      7.4
-Stable tag:        1.1.1
+Stable tag:        1.2.0
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Schickt Card-Forms-Einsendungen signiert an einen Webhook, etwa an einen n8n-Workflow. Benötigt Card Forms 1.3.0 oder neuer, für den Webhook-Schalter im Formular-Editor 1.3.1.
+Schickt Card-Forms-Einsendungen signiert an einen Webhook, etwa an einen n8n-Workflow. Für Card Forms 1.3; ab Card Forms 2.0 ist der Versand eingebaut, und das Addon kann gelöscht werden.
 
 == Description ==
+
+**Ab Card Forms 2.0 ist der Webhook-Versand Teil von Card Forms** (Modul „Webhook“). Version 1.2.0 ist die letzte dieses Addons: Neben Card Forms 2.0 hängt es sich nirgends mehr ein und zeigt nur einen Hinweis, dass es gelöscht werden kann. Secret, Zustellprotokoll und offene Zustellungen übernimmt Card Forms unverändert; beim Löschen des Addons bleiben sie erhalten. Neben Card Forms 1.3 arbeitet 1.2.0 wie 1.1.1.
 
 Erweitert **Card Forms** um den Versand jeder Einsendung an eine Webhook-URL.
 
@@ -100,6 +102,11 @@ Im Code-Node HMAC-SHA256 über `Timestamp + "." + Rohrumpf` mit dem Secret berec
 
 == Changelog ==
 
+= 1.2.0 =
+* Letzte Version. Neben Card Forms 2.0 versendet Card Forms selbst; das Addon hängt sich dann nirgends mehr ein (kein Versand, kein Cron, keine Seite) und zeigt nur den Hinweis, dass es gelöscht werden kann — oder, falls das Modul „Webhook“ in Card Forms aus ist, dass es dort einzuschalten ist.
+* Neben Card Forms 1.3 unverändert wie 1.1.1.
+* Beim Löschen des Addons bleiben Signatur-Secret, Zustellprotokoll und offene Zustellungen erhalten; Card Forms 2.0 arbeitet mit genau diesen Daten weiter. Entfernt wird nur noch der Zustand der Update-Prüfung. Aufgeräumt wird beim Löschen von Card Forms.
+
 = 1.1.1 =
 * Deutsche Übersetzung: Die Seite Card Forms → Webhook und alle Hinweise des Plugins erscheinen auf deutschen Websites jetzt auf Deutsch. Bisher fehlten die Sprachdateien im Paket.
 
@@ -130,6 +137,9 @@ Im Code-Node HMAC-SHA256 über `Timestamp + "." + Rohrumpf` mit dem Secret berec
 * Lizenz-Header von Proprietary auf GPLv2 or later; kommerziell sind Updates und Support.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Letzte Version, Voraussetzung für den Wechsel auf Card Forms 2.0: Erst mit 1.2.0 übernimmt Card Forms den Versand, bis dahin sendet das Addon weiter. Danach kann das Addon gelöscht werden, Secret und Protokoll bleiben erhalten.
 
 = 1.1.0 =
 Webhooks werden ab jetzt tatsächlich gesendet. Vor dem Update prüfen, welche Formulare einen Webhook eingetragen haben — deren Einsendungen gehen ab dann an die eingetragene Adresse. Benötigt Card Forms 1.3.0, für den Webhook-Schalter im Formular-Editor 1.3.1.
